@@ -41,7 +41,7 @@ or
 
 Clone this repo:
 ```
-git clone https://github.com/scripsmith/topwords.git
+git clone https://github.com/scriptsmith/topwords.git
 cd topwords
 ```
 
@@ -67,7 +67,7 @@ The following pattern was used to find words in the corpus:
 ### Clone this repo
 
 ```
-git clone https://github.com/scripsmith/topwords.git
+git clone https://github.com/scriptsmith/topwords.git
 cd topwords
 ```
 
