@@ -80,7 +80,7 @@ Download and extract the [guttenberg-dammit](https://github.com/aparrish/gutenbe
 Finds words from the 40000+ books with English as a primary language:
 
 ```
-jq -r '.[] | select(.Language[0] == "English") | "gutenberg-dammit-files/" + ."gd-path"' gutenberg-dammit-files/gutenberg-metadata.json | parallel "grep -ohPf pattern.txt {}" | tr '[:upper:]' '[:lower:]' > allwords.txt
+jq -r '.[] | select((.Language | length) == 1 and .Language[0] == "English") | "gutenberg-dammit-files/" + ."gd-path"' gutenberg-dammit-files/gutenberg-metadata.json | parallel "grep -ohPf pattern.txt {}" | tr '[:upper:]' '[:lower:]' > allwords.txt
 ```
 
 ### Sort and count words
