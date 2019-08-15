@@ -61,7 +61,7 @@ Tools used:
 
 The following pattern was used to find words in the corpus:
 ```regex
-(?<!')[^\W_0-9]+
+[A-Za-z]+('[A-Za-z]+)?(?<!('s))
 ```
 
 ### Clone this repo
@@ -89,7 +89,7 @@ If your temporary directory can't store more than 60GiB, change the value of `TM
 
 ```
 TMP_DIR=/tmp
-sort -T $TMP_DIR words.txt | uniq -c | sed 's/^\s*//' | sort -nr > counts.txt
+sort -T $TMP_DIR allwords.txt | uniq -c | sed 's/^\s*//' | sort -nr > counts.txt
 ```
 
 ### Remove word counts
